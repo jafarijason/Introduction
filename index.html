@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
     <title>Document</title>
 </head>
@@ -12,6 +13,22 @@
     <div id="app">
         {{ message }}
     </div>
+
+    <div id="app-2">
+        <span v-bind:title="message">
+            Hover your mouse over me for a few seconds
+            to see my dynamically bound title!
+        </span>
+    </div>
+
+    <hr>
+
+    <div id="app3">
+        <span v-if="seen">you can see me</span>
+        <span v-if="seen != true">you canttttt seeeee me</span>
+    </div>
+
+
 
 
     <script src="index.js"></script>
